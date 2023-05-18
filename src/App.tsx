@@ -9,6 +9,8 @@ function App() {
   return (
     <>
       <a href="http://ui.chenyuhao.site">sss</a>
+      <a href="http://blog.chenyuhao.site">123</a>
+      <a href="http://viz.chenyuhao.site">sss</a>
       <div>test</div>
     </>
   );

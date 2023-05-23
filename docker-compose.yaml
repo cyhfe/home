@@ -1,6 +1,6 @@
-version: "1"
 services:
   app:
+    restart: always
     build:
       context: .
       dockerfile: Dockerfile

@@ -18,19 +18,19 @@ const linkStyle = css`
 
 const data = [
   {
-    link: "http://ui.chenyuhao.site",
+    link: "http://ui.icyh.me",
     label: "COMPONENT LIBRARY",
   },
   {
-    link: "http://viz.chenyuhao.site",
+    link: "http://ui.icyh.me",
     label: " D3 REACT VISUALIZATION",
   },
   {
-    link: "http://blog.chenyuhao.site",
+    link: "http://ui.icyh.me",
     label: "BLOG",
   },
   {
-    link: "https://github.com/cyhfe",
+    link: "http://ui.icyh.me",
     label: "GITHUB",
   },
 ];
@@ -50,20 +50,6 @@ function App() {
           </div>
         );
       })}
-      {/* <div css={linkContainer}>
-        <div css={titleStyle}>component library</div>
-        <div css={linkStyle}>
-          <a href="http://ui.chenyuhao.site">http://ui.chenyuhao.site</a>
-        </div>
-      </div>
-      <div css={linkContainer}>
-        blog
-        <a href="http://blog.chenyuhao.site">http://blog.chenyuhao.site</a>
-      </div>
-      <div css={linkContainer}>
-        D3 React visualization
-        <a href="http://viz.chenyuhao.site">http://viz.chenyuhao.site</a>
-      </div> */}
     </div>
   );
 }

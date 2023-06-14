@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: deploy
 
 on:
   push:
@@ -12,5 +12,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Build the Docker image
-        run: sudo docker-compose -p home up --build -d
+      - name: docker compose
+        run: docker compose -p home up --build -d

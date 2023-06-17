@@ -14,5 +14,3 @@ services:
       - ./certbot/www:/var/www/certbot
     command: certonly --webroot --webroot-path=/var/www/certbot --email
       cccchenyuhao@gmail.com --agree-tos --no-eff-email --staging -d icyh.me
-volume:
-  certbot:

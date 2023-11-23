@@ -1,0 +1,104 @@
+## react 组件库
+
+- dumi 构建(旧)
+
+  <a href="https://ui.icyh.me" target="_blank">
+    ui.icyh.me
+  </a>
+
+  <a href="https://github.com/cyhfe/ui" target="_blank">
+    github
+  </a>
+
+- vite lib mode 构建发布 npm, storybook 文档编写
+
+  <a
+    href="https://655ae4314b829579b570aedd-eaqjkwkvgc.chromatic.com/"
+    target="_blank"
+  >
+    storybook
+  </a>
+
+  <a href="https://github.com/cyhfe/react-ui" target="_blank">
+    github
+  </a>
+
+## realtime
+
+由 react tailwind express prisma sqlite socket.io openai canvas mdx...等搭建的全栈项目
+
+主要功能:
+
+- 登录,注册,jwt 鉴权,自动登录路由跳转等...
+- 私聊
+- 群聊
+- 聊天框支持 markdown, 滚动懒加载等...
+- 互动白板
+- openai 聊天机器人
+- openai 图片生成
+
+<a href="https://realtime.icyh.me" target="_blank">
+  realtime.icyh.me
+</a>
+
+<a href="https://github.com/cyhfe/realtime" target="_blank">
+  github: 前端
+</a>
+
+<a href="https://github.com/cyhfe/realtime-server" target="_blank">
+  github: 服务端
+</a>
+
+## d3
+
+<a href="https://d3.icyh.me" target="_blank">
+  d3.icyh.me
+</a>
+
+<a href="https://github.com/cyhfe/d3" target="_blank">
+  github
+</a>
+
+## threejs
+
+<a href="https://three.icyh.me" target="_blank">
+  three.icyh.me
+</a>
+
+<a href="https://github.com/cyhfe/threejs" target="_blank">
+  github
+</a>
+
+## create-template
+
+一个脚手架生成工具,手写模板配置.包含几个自己常用的前后端模板
+
+```bash
+npx @cyhfe/create-template
+
+npm create @cyhfe/template
+```
+
+<a href="https://github.com/cyhfe/create-template" target="_blank">
+  github
+</a>
+
+## blog
+
+<a href="https://blog.icyh.me" target="_blank">
+  blog.icyh.me
+</a>
+
+## 个人网站搭建
+
+网站部署在 digitalocean 的 ubuntu 服务器上.
+
+前端项目使用 nginx 作为服务器,node 服务使用 PM2 管理
+
+每个项目都跑在独立的 docker container 中
+
+通过 github action 配合 self-hosted runner 监听 git push main 自动重新构建运行 docker.以此实现自动化部署
+
+使用 nginx 的 proxy_pass 转发请求到对应端口的应用.
+
+打包的带 hash 的静态资源配置长缓存...

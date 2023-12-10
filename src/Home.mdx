@@ -1,127 +1,108 @@
+# PORTFOLIO
+
 ## react 组件库
 
-- dumi 构建(旧)
+### ui
 
-  <a href="https://ui.icyh.me" target="_blank">
+dumi 构建,较详细的文档.参考 reach-ui, radix-ui, mui 等库,主要是学习用.
 
-  <img src="tooltip.png" />
+#### screenshot
 
-  ui.icyh.me
+![ui.png](ui.png)
 
-  </a>
+- [website](https://ui.icyh.me)
 
-  <a href="https://github.com/cyhfe/ui" target="_blank">
-    github
-  </a>
+- [github](https://github.com/cyhfe/ui/tree/main/src)
 
-- vite lib mode 构建发布 npm, storybook 文档编写
+### react-ui
 
-      <a href="https://655ae4314b829579b570aedd-eaqjkwkvgc.chromatic.com/" target="\_blank">
+vite lib mode 打包发布到 npm,storybook 文档编写.目标是做成真正可用的版本.
 
-        <img src="storybook.png" />
+#### screenshot
 
-        storybook
+![storybook.png](storybook.png)
 
-      </a>
-
-  <a href="https://github.com/cyhfe/react-ui" target="_blank">
-    github
-  </a>
+- [storybook](https://655ae4314b829579b570aedd-thytecihvz.chromatic.com/)
+- [github](https://github.com/cyhfe/react-ui/tree/main/lib)
 
 ## realtime
 
-由 react tailwind express prisma sqlite socket.io openai canvas mdx...等搭建的全栈项目
-
 主要功能:
 
-- 登录,注册,jwt 鉴权,自动登录路由跳转等...
+- 私聊,群聊
+- 多人互动白板
+- ai 聊天机器人
+- ai 图片生成
 
-- 私聊
+### screenshot
 
-- 群聊
+![realtime.png](realtime.png)
 
-- 聊天框支持 markdown, 滚动懒加载等...
+- [website](https://realtime.icyh.me)
 
-- 互动白板
+- [github: web](https://github.com/cyhfe/realtime)
 
-- openai 聊天机器人
+- [github: server](https://github.com/cyhfe/realtime-server)
 
-- openai 图片生成
+## analytics
 
-<a href="https://realtime.icyh.me" target="_blank">
+简单的网页分析工具.由 3 个部分组成
 
-<img src="realtime.png" />
+- 目标网站插入 script,监听路由变化和页面可见性发送统计数据
 
-realtime.icyh.me
+- express + prisma + sqlite 持久化数据
 
-</a>
+- 前端数据图表展示
 
-<a href="https://github.com/cyhfe/realtime" target="_blank">
-  github: 前端
-</a>
+### screenshot
 
-<a href="https://github.com/cyhfe/realtime-server" target="_blank">
-  github: 服务端
-</a>
+![analytics.png](analytics.png)
+
+- [website](https://analytics.icyh.me)
+
+- [github: web](https://github.com/cyhfe/analytics-dashboard)
+
+- [github: server](https://github.com/cyhfe/analytics-server)
+
+- [github: script](https://github.com/cyhfe/analytics-web)
 
 ## d3
 
-<a href="https://d3.icyh.me" target="_blank">
+### screenshot
 
-<img src="d3.png" />
+![d3.png](d3.png)
 
-d3.icyh.me
+- [website](https://d3.icyh.me)
 
-</a>
-
-<a href="https://github.com/cyhfe/d3" target="_blank">
-  github
-</a>
+- [github](https://github.com/cyhfe/d3)
 
 ## threejs
 
-<a href="https://three.icyh.me" target="_blank">
+### screenshot
 
-<img src="physic.png" />
+![physic.png](physic.png)
 
-three.icyh.me
+- [website](https://three.icyh.me)
 
-</a>
-
-<a href="https://github.com/cyhfe/threejs" target="_blank">
-  github
-</a>
+- [github](https://github.com/cyhfe/threejs)
 
 ## create-template
 
-一个脚手架生成工具,手写模板配置.包含几个自己常用的前后端模板
+一个快速生成项目脚手架的 cli 工具. 参考了 create-vite 的实现
 
-```bash
-npx @cyhfe/create-template
+- [npm](https://www.npmjs.com/package/@cyhfe/create-template)
 
-npm create @cyhfe/template
-```
-
-<a href="https://github.com/cyhfe/create-template" target="_blank">
-  github
-</a>
+- [github](https://github.com/cyhfe/create-template)
 
 ## blog
 
-<a href="https://blog.icyh.me" target="_blank">
-  blog.icyh.me
-</a>
+- [website](https://blog.icyh.me)
 
-## 个人网站搭建
+## 个人网站部署
 
-网站部署在 digitalocean 的 ubuntu 服务器上.
-
-前端项目使用 nginx 作为服务器,node 服务使用 PM2 管理
-
-每个项目都跑在独立的 docker container 中
-
-通过 github action 配合 self-hosted runner 监听 git push main 自动重新构建运行 docker.以此实现自动化部署
-
-使用 nginx 的 proxy_pass 转发请求到对应端口的应用.
-
-打包的带 hash 的静态资源配置长缓存...
+- 服务器: digitalocean ubuntu
+- spa 应用: docker + nginx
+- node 服务: docker + PM2
+- https: cerbot
+- 转发二级域名: nginx proxy_pass
+- 自动化部署: github actions + docker compose
